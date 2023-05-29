@@ -2,7 +2,7 @@
 export const contractAddress = "0x12A243D816aE3B64dC23def3821fe8A9549EF42b";
 
 // Replace this with your domain name.
-export const domainName = "https://web3athon2023.vercel.app/";
+export const domainName = "http://jired.com/";
 
 // Minimum number of tokens required to access
 export const minimumBalance = 1;
