@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { ThirdwebSDK } from "@thirdweb-dev/sdk";
 import { useLogout, useUser } from "@thirdweb-dev/react";
+import { XdcApothemNetwork } from "@thirdweb-dev/chains";
 import { getUser } from "../auth.config";
 import checkBalance from "../util/checkBalance";
 import styles from "../styles/Home.module.css";
@@ -53,7 +54,7 @@ export async function getServerSideProps(context) {
   // Instantiate our SDK
   const sdk = ThirdwebSDK.fromPrivateKey(
     process.env.THIRDWEB_AUTH_PRIVATE_KEY,
-    "apothem"
+    { XdcApothemNetwork }
   );
 
   // Check to see if the user has an NFT
