@@ -8,45 +8,50 @@ export default function Login() {
   const address = useAddress(); // Get the user's address
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.h1}>Auth - NFT Gated Content</h1>
-      <p className={styles.explain}>
-        Serve exclusive content to users who own an NFT from your collection,
-        using{" "}
-        <b>
-          <a
-            href="https://portal.thirdweb.com/building-web3-apps/authenticating-users"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.purple}
-          >
-            Auth
-          </a>
-        </b>
-        !
-      </p>
 
-      <p className={styles.explain}>
-        You cannot access the{" "}
-        <Link className={styles.purple} href="/">
-          main page
-        </Link>{" "}
-        unless you own an NFT from our collection!
-      </p>
+    <><div className={styles.back_div}>
+      <a className={styles.color_back_div} href="https://web3athon2023.vercel.app/">
+        back
+      </a>
+    </div><div className={styles.container}>
+        <h1 className={styles.h1}>Auth - NFT Gated Content</h1>
+        <p className={styles.explain}>
+          Serve exclusive content to users who own an NFT from your collection,
+          using{" "}
+          <b>
+            <a
+              href="https://portal.thirdweb.com/building-web3-apps/authenticating-users"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.purple}
+            >
+              Auth
+            </a>
+          </b>
+          !
+        </p>
 
-      <hr className={styles.divider} />
+        <p className={styles.explain}>
+          You cannot access the{" "}
+          <Link className={styles.purple} href="/">
+            main page
+          </Link>{" "}
+          unless you own an NFT from our collection!
+        </p>
 
-      <>
-        {address ? (
-          <p>
-            Welcome, {address?.slice(0, 6)}...{address?.slice(-4)}
-          </p>
-        ) : (
-          <p>Please connect your wallet to continue.</p>
-        )}
+        <hr className={styles.divider} />
 
-        <ConnectWallet accentColor="#F213A4" />
-      </>
-    </div>
+        <>
+          {address ? (
+            <p>
+              Welcome, {address?.slice(0, 6)}...{address?.slice(-4)}
+            </p>
+          ) : (
+            <p>Please connect your wallet to continue.</p>
+          )}
+
+          <ConnectWallet accentColor="#F213A4" />
+        </>
+      </div></>
   );
 }

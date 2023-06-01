@@ -88,6 +88,23 @@
   flex-wrap: wrap;
 }
 
+
+.back_div {
+  margin: 2rem 0 0rem 0;
+  position: absolute;
+  top: 0.25rem;
+  right: 1rem;
+}
+
+.color_back_div {
+  color: #fff;
+  padding: 0.45rem 0.35rem;
+  background-color: rgb(3, 1, 26);
+  border-radius: 12px;
+  text-decoration: none;
+
+}
+
 /* Between 700px and 900px */
 @media screen and (min-width: 700px) and (max-width: 900px) {
   .contractBoxGrid {
