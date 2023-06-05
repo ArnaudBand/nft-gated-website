@@ -54,9 +54,11 @@ export async function getServerSideProps(context) {
   // Instantiate our SDK
   const sdk = ThirdwebSDK.fromPrivateKey(
     process.env.THIRDWEB_AUTH_PRIVATE_KEY,
-    // { XdcApothemNetwork },
-    "apothem"
+    { XdcApothemNetwork },
+    // "apothem"
   );
+
+  console.log("sdk:", sdk);
 
   // Check to see if the user has an NFT
   const hasNft = await checkBalance(sdk, user.address);
