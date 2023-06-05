@@ -1,5 +1,5 @@
 // Replace this with your contract address
-export const contractAddress = "0x12A243D816aE3B64dC23def3821fe8A9549EF42b";
+export const contractAddress = "0x7B92f22A54b89E32fB2395ed5787D7894f789dfd";
 
 // Replace this with your domain name.
 export const domainName = "http://jired.com/";
