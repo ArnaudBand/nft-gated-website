@@ -12,6 +12,7 @@ export default function Home() {
   const { isLoggedIn, isLoading } = useUser();
   const router = useRouter();
 
+  console.log("isLoggedIn", isLoggedIn);
   useEffect(() => {
     if (!isLoading && !isLoggedIn) {
       router.push("/login");
@@ -43,6 +44,13 @@ export async function getServerSideProps(context) {
         permanent: false,
       },
     };
+  } else {
+    return {
+      redirect: {
+        destination: 'http:jired.com',
+        permanent: true,
+      }
+    }
   }
 
   // Ensure we are able to generate an auth token using our private key instantiated SDK
